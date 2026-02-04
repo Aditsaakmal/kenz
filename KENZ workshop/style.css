@@ -1,0 +1,203 @@
+/* ================= GLOBAL ================= */
+body {
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("hero.jpeg");
+  background-size: 100px;
+  background-position: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.hero h1 span {
+  color: #ffc107;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= ICON ================= */
+.feature-icon {
+  font-size: 3rem;
+  color: #ffc107;
+  transition: transform 0.3s ease;
+}
+
+.col-md-4:hover .feature-icon {
+  transform: scale(1.15);
+}
+
+/* ================= CTA ================= */
+.cta {
+  color: #ffffff;
+  background: #000000;
+}
+
+/* ================= GALERI ================= */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ================= GOOGLE MAPS REVIEW ================= */
+.review-image-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.review-image-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ================= WHATSAPP FLOAT WITH TEXT ================= */
+.wa-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 18px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.wa-float i {
+  font-size: 22px;
+}
+
+.wa-float:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .wa-float span {
+    display: none; /* di HP hanya icon */
+  }
+
+  .wa-float {
+    padding: 14px;
+    border-radius: 50%;
+  }
+}
+
+/* ================= FOOTER ================= */
+footer {
+  color: #000000;
+}
+
+/* LAYANAN */
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.service-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-content {
+  padding: 15px;
+  text-align: center;
+}
+
+/* ================= LAYANAN KAMI ================= */
+.service-box {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  background: #ffc107;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 32px;
+}
+
+/* ================= GALERI KITA ================= */
+#galeri .service-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ukuran gambar FIX (SAMA seperti produk) */
+#galeri .img-produk {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* PERSEGI */
+  object-fit: cover;
+}
+
+/* khusus carousel agar tidak berubah ukuran */
+#galeri .carousel-item {
+  height: auto;
+}
+
+/* Offset navbar fixed */
+section {
+  scroll-margin-top: 90px;
+  padding-top: 90px;
+}
